@@ -14,7 +14,6 @@ const player2Element = document.querySelector(".main-1")
 
 function rollDice() {
   const diceNumber = Math.ceil(Math.random() * 6);
-  console.log(diceNumber);
   const image = (document.getElementsByClassName("images")[0]
     .querySelector("img").src = `./assets/${diceNumber}.png`);
   console.log(image);
@@ -32,7 +31,7 @@ function rollDice() {
       currentScore1 = 0;
       document.querySelector("#currentPlayer1").innerHTML = currentScore1;
     } else {
-      currentPlayer = 0;
+      currentScore2 = 0;
       document.querySelector("#currentPlayer2").innerHTML = currentScore2;
     }
     currentPlayer = !currentPlayer;
@@ -41,29 +40,36 @@ function rollDice() {
   }
 }
 
-function hold(){
-  if(currentPlayer){
-    let total1 = document.querySelector('#totalScore1')
-    total1.innerHTML = +total1.innerHTML + currentScore1
-    currentScore1 = 0
-    document.querySelector('#currentPlayer1').innerHTML = currentScore1
-    if(total1.innerHTML >=100){
-      document.querySelector('.gameArea1').innerHTML = `<h1> Winner is ${player1} </h1>`
+function hold() {
+  if (currentPlayer && currentScore1 > 0) {
+    let total1 = document.querySelector('#totalScore1');
+    total1.innerHTML = +total1.innerHTML + currentScore1;
+    currentScore1 = 0;
+    document.querySelector('#currentPlayer1').innerHTML = currentScore1;
+
+    if (total1.innerHTML >= 100) {
+      document.querySelector('.gameArea1').innerHTML = `<h1> Winner is ${player1} </h1>`;
+    } else {
+      currentPlayer = !currentPlayer;
+      player1Element.classList.toggle("active");
+      player2Element.classList.toggle("active");
     }
-  } else{
-    let total2 = document.querySelector('#totalScore2')
-    total2.innerHTML = +total2.innerHTML + currentScore2
-    currentScore2 = 0
-    document.querySelector('#currentPlayer2').innerHTML = currentScore2
-    if(total2.innerHTML >=100){
-      document.querySelector('.gameArea2').innerHTML = `<h1> Winner is ${player2} </h1>`
+
+  } else if (!currentPlayer && currentScore2 > 0) {
+    let total2 = document.querySelector('#totalScore2');
+    total2.innerHTML = +total2.innerHTML + currentScore2;
+    currentScore2 = 0;
+    document.querySelector('#currentPlayer2').innerHTML = currentScore2;
+
+    if (total2.innerHTML >= 100) {
+      document.querySelector('.gameArea2').innerHTML = `<h1> Winner is ${player2} </h1>`;
+    } else {
+      currentPlayer = !currentPlayer;
+      player1Element.classList.toggle("active");
+      player2Element.classList.toggle("active");
     }
   }
-  currentPlayer = !currentPlayer;
-    player1Element.classList.toggle("active");
-    player2Element.classList.toggle("active");
 }
-
 function newGame(){
     // Reset total scores and current scores for both players
     document.getElementById("totalScore1").textContent = 0;
