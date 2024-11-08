@@ -1,0 +1,111 @@
+.main {
+    width: 300px;
+    height: 400px;
+    background-color: lightpink;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.main-1 {
+    width: 300px;
+    height: 400px;
+    background-color:lightpink;
+    text-align: center;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.box {
+    display: flex;
+    justify-content:center;
+}
+.container{
+    width: 110px;
+    height: 100px;
+    background-color: crimson;
+    position:relative;
+    top: 140px;
+    text-align: center;
+    border-radius: 5px;
+}
+.container-1{
+    width: 120px;
+    height: 100px;
+    background-color: crimson;
+    position:relative;
+    top: 140px;
+    text-align: center;
+    border-radius: 5px;
+}
+.mai{
+    display: flex;
+    justify-content:center;
+}
+.btn{
+   display: flex;
+   justify-content: center;
+}
+.New{
+    position: relative;
+    top: 50px;
+    left: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Roll{
+    position: relative;
+    right:14px;
+    top: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.Hold{
+    position: relative;
+    top: 350px;
+    right: 74px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.images{
+   position: relative;
+   bottom: 100px;
+   left: 150px;
+   font-size: 100px;
+}
+.images img {
+  width: 100px;
+  height: 100px;
+}
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.main, .main-1 {
+    width: 300px;
+    height: 400px;
+    background-color: pink;
+    text-align: center;
+    padding: 10px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.main, .main-1 {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    padding: 10px;
+}
+.active{
+    background-color:plum;
+}
+body{
+    background-color:blue;
+}

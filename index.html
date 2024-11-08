@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="btn ">
+        <button class="New btns" onclick="newGame()">New Game</button>
+        <button class="Roll btns" onclick="rollDice()">Roll Dice</button>
+        <button class="Hold btns " onclick="hold()">Hold</button>
+    </div>
+    <div class="box">
+        <div class="main active">
+            <h1 class="name">Player</h1>
+            <h2 id="totalScore1">0</h2>
+            <div class="gameArea1 "></div>
+            <div class="mai col">
+                <div class="container ">
+                    <h3>Current</h3>
+                        <h2 id="currentPlayer1">0</h2>
+                    </div>
+                </div>
+                <div class="images ">
+                    <img src="./assets/./6.png" alt="">
+                </div>
+        </div>
+        <div class="main-1">
+            <h1 class="name-1">Player</h1>
+                <h2 id="totalScore2">0</h2>
+                <div class="gameArea2"></div>
+                <div class="mai">
+                    <div class="container-1">
+                        <h3>Current</h3>
+                        <h2 id="currentPlayer2">0</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <script src="./app.js"></script>
+</body>
+</html>
