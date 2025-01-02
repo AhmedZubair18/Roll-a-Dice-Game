@@ -77,5 +77,7 @@ function newGame(){
     document.getElementById("currentPlayer1").textContent = 0;
     document.getElementById("currentPlayer2").textContent = 0;
     document.querySelector(".images img").src = "./assets/1.png"; 
+    document.querySelector('.gameArea1').textContent = ""
+    document.querySelector('.gameArea2d f').textContent = ""
 
 }
